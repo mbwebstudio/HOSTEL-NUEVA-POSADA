@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hostel Nueva Posada · Ciudad Vieja, Montevideo</title>
+<meta name="description" content="Hostel Nueva Posada: un palacete restaurado en Juan Carlos Gómez 1487, Ciudad Vieja. Habitaciones amplias, cocina grande y zonas comunes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cabin:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F3EC;--surface:#FFFFFF;--ink:#2B2620;--muted:#625A50;--accent:#A0522D;--accent-ink:#FFFFFF;--soft:#EBDCCB;--line:#E5DCCF;
+--display:Cinzel, Georgia, serif;--body:Cabin, system-ui, sans-serif;--r:6px;--br:6px;--dw:700;--tr:0;--h1:4.4rem}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.08;letter-spacing:var(--tr)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+svg.i{width:20px;height:20px;flex:none}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:var(--br);font-weight:700;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--accent);color:var(--accent-ink)}
+.btn-ghost{border:2px solid currentColor}
+.stars{color:var(--star,var(--accent));letter-spacing:2px}
+.rating{display:flex;flex-wrap:wrap;align-items:center;gap:10px;color:var(--muted);font-size:.95rem}
+.rating b{color:var(--ink)}
+.art svg{width:100%;height:auto;display:block}
+.mark{width:34px;height:34px;flex:none}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:var(--dw);font-size:1.3rem;line-height:1.1}
+.kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.map{background:var(--soft);overflow:hidden}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.hours{border-collapse:collapse;width:100%;max-width:440px}
+.hours caption{text-align:left;font-family:var(--display);font-weight:var(--dw);font-size:1.3rem;margin-bottom:8px}
+.hours th,.hours td{text-align:left;padding:8px 0;border-bottom:1px solid var(--line);font-weight:400}
+.hours th{color:var(--muted);width:45%}
+.note{display:flex;gap:10px;color:var(--muted)}
+.rows{display:grid;gap:16px;align-content:start}
+.row{display:flex;gap:12px;align-items:flex-start}
+.row a{font-weight:700}
+.float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:50;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+.float svg{width:28px;height:28px}
+.ft{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.ft .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+.rv header{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:2px solid var(--ink)}
+.rv header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.rv header ul{display:flex;gap:26px;list-style:none;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.rv header ul a{text-decoration:none}
+.rv header ul a:hover{color:var(--accent)}
+.rv header .btn{padding:9px 16px;font-size:.9rem;border:2px solid var(--ink);background:transparent;color:var(--ink)}
+@media(max-width:860px){.rv header nav{display:none}}
+@media(max-width:480px){.rv header .btn span{display:none}.rv .logo{font-size:1.1rem}}
+.rv-hero{padding:56px 0 90px}
+.rv-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start}
+.rv-grid .kicker{grid-column:1/-1;display:flex;gap:14px;align-items:center}
+.rv-grid .kicker::after{content:'';flex:1;height:1px;background:var(--ink)}
+.rv-grid h1{grid-column:1/9;font-size:clamp(2.8rem,8vw,calc(var(--h1) * 1.25));line-height:.98}
+.rv-frame{grid-column:9/13;grid-row:2/4;border:2px solid var(--ink);background:var(--soft);padding:28px;transform:rotate(2.5deg);box-shadow:12px 12px 0 var(--accent);margin-top:20px}
+.rv-side{grid-column:1/8;display:grid;gap:26px}
+.rv-side .lead{font-size:1.18rem;color:var(--muted);max-width:50ch;border-left:3px solid var(--accent);padding-left:18px}
+.rv-side .cta{display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:860px){.rv-grid h1,.rv-side{grid-column:1/-1}.rv-frame{grid-column:1/-1;grid-row:auto;max-width:320px;margin:10px 0 10px 6px}}
+.rv-strip{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow:hidden;white-space:nowrap;padding:12px 0;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.rv-strip .run{display:inline-flex;gap:26px;padding-right:26px;animation:rv 40s linear infinite}
+.rv-strip i{color:var(--accent);font-style:normal}
+@keyframes rv{to{transform:translateX(-50%)}}
+.rv section{padding:96px 0}
+.rv h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:12px}
+.rv .sub{color:var(--muted);max-width:56ch;margin-bottom:40px}
+.rv-mag{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rv-mag li{border:2px solid var(--ink);padding:28px;background:var(--surface)}
+.rv-mag li:first-child{grid-row:span 2;background:var(--accent);color:var(--accent-ink);display:flex;flex-direction:column;justify-content:flex-end;min-height:340px}
+.rv-mag li:first-child h3{font-size:clamp(1.9rem,3.4vw,2.6rem)}
+.rv-mag h3{font-size:1.35rem;margin-bottom:8px}
+.rv-mag p{opacity:.85}
+@media(max-width:860px){.rv-mag{grid-template-columns:1fr}.rv-mag li:first-child{grid-row:auto;min-height:220px}}
+.rv-place{background:var(--surface);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.rv-pull{font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.25;max-width:30ch;margin:16px 0 36px}
+.rv-cols{columns:2 300px;column-gap:48px}
+.rv-cols p{margin-bottom:14px}
+.rv-facts{display:flex;flex-wrap:wrap;gap:0;margin-top:40px;border-top:1px solid var(--ink)}
+.rv-facts div{flex:1 1 200px;padding:20px 20px 0 0}
+.rv-facts b{font-family:var(--display);font-weight:var(--dw);font-size:1.6rem;display:block}
+.rv-facts span{color:var(--muted);font-size:.95rem}
+.rv-car{display:grid;grid-auto-flow:column;grid-auto-columns:min(360px,85%);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px}
+.rv-car figure{scroll-snap-align:start;border:2px solid var(--ink);padding:28px;background:var(--bg);display:flex;flex-direction:column;gap:16px}
+.rv-car figcaption{margin-top:auto;font-weight:700}
+.rv-contact .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.rv .map{border:2px solid var(--ink);box-shadow:12px 12px 0 var(--soft)}
+.rv .map iframe{min-height:440px}
+@media(max-width:860px){.rv-contact .grid{grid-template-columns:1fr}}
+.rv-close{background:var(--ink);color:var(--bg)}
+.rv-close .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:28px}
+.rv-close h2{font-size:clamp(2.2rem,5.4vw,4rem);max-width:16ch;margin:0}
+.rv-close p{opacity:.8;margin-top:12px}
+.rv-close .btn{background:var(--bg);color:var(--ink)}
+.rv .ft{border-top:0}
+
+
+</style>
+</head>
+<body>
+<div class="rv">
+<header><div class="wrap"><a class="logo" href="#"><svg class="mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="var(--accent)"/><path d="M7 25V11M27 25v-6M7 19h20" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linecap="round"/><rect x="9" y="14" width="7" height="4" rx="2" fill="var(--accent-ink)"/><path d="M17 19c1-3 7-3 10 0" fill="var(--accent-ink)"/></svg><span>Hostel Nueva Posada</span></a><nav aria-label="Principal"><ul><li><a href="#servicios">El hostel</a></li><li><a href="#lugar">El lugar</a></li><li><a href="#contacto">Contacto</a></li></ul></nav><a class="btn " href="https://wa.me/59896444342?text=Hola%20Nueva%20Posada%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span>Reservar</span></a></div></header>
+<main>
+<section class="rv-hero"><div class="wrap rv-grid">
+  <p class="kicker">Montevideo</p>
+  <h1>Un palacete en la Ciudad Vieja</h1>
+  <div class="rv-frame"><div class="art" aria-hidden="true"><svg viewBox="0 0 240 200"><circle cx="120" cy="100" r="92" fill="var(--soft)"/><path d="M48 170V44M150 170V44" stroke="var(--ink)" stroke-width="6" stroke-linecap="round"/><rect x="48" y="66" width="102" height="18" rx="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="5"/><rect x="48" y="128" width="102" height="18" rx="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="5"/><path d="M128 52h22M128 52v14" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/><rect x="58" y="54" width="28" height="13" rx="6" fill="var(--accent)" stroke="var(--ink)" stroke-width="4"/><rect x="58" y="116" width="28" height="13" rx="6" fill="var(--accent)" stroke="var(--ink)" stroke-width="4"/><path d="M168 170v-62c0-14 10-24 24-24s24 10 24 24v62z" fill="var(--accent)" stroke="var(--ink)" stroke-width="5" stroke-linejoin="round"/><path d="M180 84c0-10 24-10 24 0" fill="none" stroke="var(--ink)" stroke-width="5"/><rect x="176" y="130" width="32" height="24" rx="5" fill="var(--surface)" stroke="var(--ink)" stroke-width="4"/><path d="M176 112h32" stroke="var(--ink)" stroke-width="4"/></svg></div></div>
+  <div class="rv-side"><p class="lead">Hostel en un palacete restaurado de Juan Carlos Gómez 1487: techos altos, habitaciones amplias y cocina grande para compartir.</p><div class="cta"><a class="btn btn-main" href="https://wa.me/59896444342?text=Hola%20Nueva%20Posada%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span>Reservar por WhatsApp</span></a><a class="btn btn-ghost" href="#contacto"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Cómo llegar</a></div></div>
+</div></section>
+<div class="rv-strip"><div class="run"><span>Habitaciones amplias</span><i aria-hidden="true">●</i><span>Cocina y comedores</span><i aria-hidden="true">●</i><span>Zonas comunes</span><i aria-hidden="true">●</i><span>Para todas las personas</span><i aria-hidden="true">●</i><span>Montevideo</span><i aria-hidden="true">●</i><span aria-hidden="true">Habitaciones amplias</span><i aria-hidden="true">●</i><span aria-hidden="true">Cocina y comedores</span><i aria-hidden="true">●</i><span aria-hidden="true">Zonas comunes</span><i aria-hidden="true">●</i><span aria-hidden="true">Para todas las personas</span><i aria-hidden="true">●</i><span aria-hidden="true">Montevideo</span><i aria-hidden="true">●</i></div></div>
+<section id="servicios"><div class="wrap">
+  <h2>El hostel</h2><p class="sub">Arquitectura clásica montevideana, para viajeros.</p>
+  <ul class="rv-mag"><li><h3>Habitaciones amplias</h3><p>Espaciosas y bien equipadas, con techos altos.</p></li><li><h3>Cocina y comedores</h3><p>Grandes, para cocinar y compartir.</p></li><li><h3>Zonas comunes</h3><p>Espacios amplios para descansar o conocer gente.</p></li><li><h3>Para todas las personas</h3><p>Un lugar amigable con la comunidad LGBTQ+.</p></li></ul>
+</div></section>
+<section id="lugar" class="rv-place"><div class="wrap">
+  <p class="kicker">Ingreso y salida</p>
+  <p class="rv-pull">El check-in es desde las 14 h y el check-out hasta las 12 h.</p>
+  <div class="rv-cols"><p>Estamos en Juan Carlos Gómez 1487, a pasos de la peatonal Sarandí, la Plaza Matriz y el puerto.</p></div>
+  <div class="rv-facts"><div><b>14 h</b><span>check-in · 12 h check-out</span></div><div><b>Palacete</b><span>restaurado</span></div><div><b>Ciudad Vieja</b><span>J. C. Gómez 1487</span></div></div>
+</div></section>
+
+<section id="contacto" class="rv-contact"><div class="wrap grid">
+  <div><h2>Dónde estamos</h2><div class="rows" style="margin:26px 0 30px"><div class="row"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div>Juan Carlos Gómez 1487, Ciudad Vieja, Montevideo<br><a href="https://www.google.com/maps/place/Hostel+nueva+posada/data=!4m2!3m1!1s0x959f7f87535d3e51:0xea85aced4c5996d0" target="_blank" rel="noopener">Abrir en Google Maps</a></div></div>
+<div class="row"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><a href="tel:+59896444342">096 444 342</a> o <a href="https://wa.me/59896444342?text=Hola%20Nueva%20Posada%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener">WhatsApp</a></div></div></div><p class="note"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Check-in desde las 14 h · check-out hasta las 12 h.</span></p></div>
+  <div class="map"><iframe loading="lazy" title="Mapa de Hostel Nueva Posada" src="https://www.google.com/maps?q=-34.9046762%2C-56.2040467&output=embed"></iframe></div>
+</div></section>
+<section class="rv-close"><div class="wrap"><div><h2>¿Venís a conocer la Ciudad Vieja?</h2><p>Escribinos y reservá tu cama.</p></div><a class="btn btn-main" href="https://wa.me/59896444342?text=Hola%20Nueva%20Posada%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span>Reservar por WhatsApp</span></a></div></section>
+</main>
+<footer class="ft "><div class="wrap"><span>© 2026 Hostel Nueva Posada, Montevideo</span><span>Juan Carlos Gómez 1487, Ciudad Vieja, Montevideo</span></div></footer>
+</div>
+<a class="float" href="https://wa.me/59896444342?text=Hola%20Nueva%20Posada%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
+</body>
+</html>
